@@ -37,7 +37,6 @@ public class SwagLabsTest
     }
 	
 	@Test
-	@Order(1) 
 	public void TestSwagLabLoginLocked() {
 	  loginPage.UserNameField("locked_out_user");
 	  loginPage.PasswordField("secret_sauce"); loginPage.LoginButton();
@@ -45,7 +44,6 @@ public class SwagLabsTest
 	}
 	 
     @Test
-	@Order(2) 
     public void TestSwagLabPurchase() 
     { 
 	  loginPage.UserNameField("standard_user");
@@ -57,7 +55,6 @@ public class SwagLabsTest
 	}
 		
 	@Test
-	@Order(3) 
 	public void TestLoadImages() throws IOException 
 	{ 
 	  loginPage.UserNameField("problem_user");
