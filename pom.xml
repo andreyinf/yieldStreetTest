@@ -4,11 +4,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.sicredi</groupId>
-  <artifactId>sicrediTest</artifactId>
+  <groupId>com.yield</groupId>
+  <artifactId>yieldTest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>sicrediTest</name>
+  <name>yieldTest</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -19,10 +19,32 @@
   </properties>
 
   <dependencies>
+  <dependency>
+		<groupId>io.rest-assured</groupId>
+		<artifactId>rest-assured</artifactId>
+		<version>3.0.0</version>
+		<scope>test</scope>
+	</dependency>
+	<dependency>
+		<groupId>io.rest-assured</groupId>
+		<artifactId>json-schema-validator</artifactId>
+		<version>3.3.0</version>
+	</dependency>
+	<dependency>
+		<groupId>io.rest-assured</groupId>
+		<artifactId>json-path</artifactId>
+		<version>3.3.0</version>
+	</dependency>
+	<dependency>
+		<groupId>io.rest-assured</groupId>
+		<artifactId>xml-path</artifactId>
+		<version>3.3.0</version>
+	</dependency>
+  
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -37,7 +59,6 @@
      <artifactId>selenium-java</artifactId>
      <version>3.14.0</version>
 	</dependency>
-    
   </dependencies>
 
   <build>
@@ -81,6 +102,11 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0-M4</version>
         </plugin>
       </plugins>
     </pluginManagement>
